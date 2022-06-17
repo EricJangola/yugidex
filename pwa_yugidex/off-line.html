@@ -31,7 +31,7 @@
 
     <div id="conteudo" style="display: none;">
 
-        <div class="info_pokemon2">
+        <div class="info_yugioh2">
             
             <img id="btVoltar" src="imgs/arrow_left.png">
 
@@ -42,9 +42,9 @@
 
         <div class="card_info">
             
-            <img id="conteudo_img" src="imgs/offline_pokemon.png" class="img_pokemon2 animate__animated animate__bounce">
+            <img id="conteudo_img" src="imgs/offline_yugioh.png" class="img_yugioh2 animate__animated animate__bounce">
             
-            <div class="detalhe_pokemon">
+            <div class="detalhe_yugioh">
                 <h4>Descrição:</h4>
                 <p id="conteudo_descricao">---</p>
 
@@ -105,9 +105,9 @@
     # Globais
     #
     */
-    var quant_pokemon = 10;
+    var quant_yugioh = 10;
     var contar = 1;
-    const endpoint_pokemon = "/pokemon.json";
+    const endpoint_yugioh = "/yugioh.json";
     var tela_detalhe = document.getElementById("conteudo");
     var resultados = document.getElementById("resultados");
     var data_json;
@@ -118,19 +118,19 @@
     # Requisição AJAX
     #
     */
-    function carregar_pokemon(){
+    function carregar_yugioh(){
         
         data_json = JSON.parse(localStorage.getItem(CACHE_DINAMICO))
 
         if(data_json.length > 0){
             resultados.className = "row";
             //Carga inicial
-            imprimir_pokemon();
+            imprimir_yugioh();
         }        
         /*
         let ajax = new XMLHttpRequest();
 
-        ajax.open("GET", endpoint_pokemon, true);
+        ajax.open("GET", endpoint_yugioh, true);
         ajax.send();
         
         //Lendo requisição
@@ -143,23 +143,23 @@
                 if(data_json.length > 0){
                     resultados.className = "row";
                     //Carga inicial
-                    imprimir_pokemon();
+                    imprimir_yugioh();
                 }
             }
 
         }*/
     }
 
-    carregar_pokemon();
+    carregar_yugioh();
 
-    var files_img_pokemons = [];
+    var files_img_yugiohs = [];
 
-    function imprimir_pokemon(){
+    function imprimir_yugioh(){
 
         let html_conteudo = "";
         let limite;
-        if((contar+quant_pokemon) < data_json.length){
-            limite = (contar+quant_pokemon);
+        if((contar+quant_yugioh) < data_json.length){
+            limite = (contar+quant_yugioh);
         }else{
             limite = data_json.length;
             btCarregarMais.style.display = "none";
@@ -167,13 +167,13 @@
 
         for(let i=contar; i < limite; i++){
             //Montar Card
-            html_conteudo+=card_pokemon(i,data_json[i].name,data_json[i].type,data_json[i].imageUrl);  
+            html_conteudo+=card_yugioh(i,data_json[i].name,data_json[i].type,data_json[i].imageUrl);  
 
         }
 
         resultados.innerHTML += html_conteudo;
 
-        contar+=quant_pokemon;
+        contar+=quant_yugioh;
     }
 
     /*
@@ -194,7 +194,7 @@
     let btCarregarMais = document.getElementById("btCarregarMais");
 
     btCarregarMais.addEventListener("click", function(){
-        imprimir_pokemon();
+        imprimir_yugioh();
     });
 
     function btCard(id){
@@ -218,15 +218,15 @@
     #
     */
 
-    function card_pokemon(id,nome,tipo,img){
+    function card_yugioh(id,nome,tipo,img){
 
         return '<div class="col-6 col-md-3" onClick="javascript:btCard(\''+id+'\');" data-id="'+id+'">'+
-                    '<div class="card_pokemon color_'+tipo+'">'+
-                    '<div class="info_pokemon">'+
+                    '<div class="card_yugioh color_'+tipo+'">'+
+                    '<div class="info_yugioh">'+
                         '<h3>'+nome+'</h3>'+
                         '<span class="badge rounded-pill bg-alert-poke">'+tipo+'</span>'+
                     '</div>'+
-                    '<img src="imgs/offline_pokemon.png" class="img_pokemon">'+
+                    '<img src="imgs/offline_yugioh.png" class="img_yugioh">'+
                     '</div>'+
                 '</div>';
     }

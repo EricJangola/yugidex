@@ -15,7 +15,7 @@ var CACHE_DINAMICO = "yugidex_dinamico";
 # Requisição AJAX
 #
 */
-function carregar_pokemon(){
+function carregar_yugioh(){
     
     let ajax = new XMLHttpRequest();
 
@@ -41,18 +41,18 @@ function carregar_pokemon(){
                 }
                 
                 //Carga inicial
-                imprimir_pokemon();
+                imprimir_yugioh();
             }
         }
 
     }
 }
 
-carregar_pokemon();
+carregar_yugioh();
 
-var files_img_pokemons = [];
+var files_img_yugiohs = [];
 
-function imprimir_pokemon(){
+function imprimir_yugioh(){
 
     let html_conteudo = "";
     let limite;
@@ -65,7 +65,7 @@ function imprimir_pokemon(){
 
     for(let i=contar; i < limite; i++){
         //Montar Card
-        html_conteudo+=card_pokemon(i,data_json[i].name,data_json[i].type,data_json[i].card_images[0].image_url);  
+        html_conteudo+=card_yugioh(i,data_json[i].name,data_json[i].type,data_json[i].card_images[0].image_url);  
 
     }
 
@@ -93,7 +93,7 @@ btVoltar.addEventListener("click", function(){
 let btCarregarMais = document.getElementById("btCarregarMais");
 
 btCarregarMais.addEventListener("click", function(){
-    imprimir_pokemon();
+    imprimir_yugioh();
 });
 
 function btCard(id){
@@ -119,15 +119,15 @@ function btCard(id){
 #
 */
 
-function card_pokemon(id,nome,tipo,img){
+function card_yugioh(id,nome,tipo,img){
 
     return '<div class="col-6 col-md-3" onClick="javascript:btCard(\''+id+'\');" data-id="'+id+'">'+
-                '<div class="card_pokemon color_'+tipo.replace(/\s/g, '')+'">'+
-                '<div class="info_pokemon">'+
+                '<div class="card_yugioh color_'+tipo.replace(/\s/g, '')+'">'+
+                '<div class="info_yugioh">'+
                     '<h3>'+nome+'</h3>'+
                     '<span class="badge rounded-pill bg-alert-poke">'+tipo+'</span>'+
                 '</div>'+
-                '<img src="'+img+'" class="img_pokemon">'+
+                '<img src="'+img+'" class="img_yugioh">'+
                 '</div>'+
             '</div>';
 }

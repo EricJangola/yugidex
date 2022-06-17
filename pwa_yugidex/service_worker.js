@@ -5,15 +5,15 @@ const CACHE_NAME = "yugioh_estatico";
 const FILES_CACHE = [
     'css/animate.min.css',
     'css/bootstrap.min.css',
-    'css/Pokemon_Solid.ttf',
-    'css/Pokemon_Solid.woff',
+    'css/yugioh_Solid.ttf',
+    'css/yugioh_Solid.woff',
     'css/styles.css',
     'imgs/arrow_left.png',
     'imgs/bg_detail.png',
     'imgs/load.gif',
     'imgs/logo_white.png',
     'imgs/logo.png',
-    'imgs/offline_pokemon.png',
+    'imgs/offline_yugioh.png',
     'js/bootstrap.bundle.min.js',
     'off-line.html'
 ];

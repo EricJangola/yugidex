@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Pokemon Solid';
+    font-family: 'yugioh Solid';
     font-style: normal;
     font-weight: 400;
-    src: local('Pokemon Solid'), url('Pokemon_Solid.woff') format('woff');
+    src: local('yugioh Solid'), url('Yugioh_Solid.woff') format('woff');
 }
 
 .title_logo{
-    font-family: 'Pokemon Solid', sans-serif;
+    font-family: 'yugioh Solid', sans-serif;
     font-size: 2.4em;
     margin-top: 40px;
     margin-left: 10px;
@@ -37,7 +37,7 @@ main{
     margin-bottom: 60px;
 }
 
-.card_pokemon{
+.card_yugioh{
     background: #d4d6d5;
     background-image: url("../imgs/icon_1024.png");
     background-size: 20%;
@@ -51,26 +51,26 @@ main{
     overflow: hidden;
     position: relative;
 }
-.info_pokemon{
+.info_yugioh{
     z-index: 9;
     position: relative;
     width: 50%;
 }
-.info_pokemon h3{
+.info_yugioh h3{
     color: white;
     font-size: 1rem;
 }
 
-.info_pokemon2 h1{
+.info_yugioh2 h1{
     color: white;
     font-size: 2rem;
 }
-.info_pokemon2 h2{
+.info_yugioh2 h2{
     width: 150px;
     display: inline-block;
 }
 
-.img_pokemon{
+.img_yugioh{
     width: 70px;
     position: absolute;
     right: 4px;
@@ -122,12 +122,12 @@ main{
 
 }
 
-.info_pokemon2{    
+.info_yugioh2{    
     position: relative;    
     margin-left: 20px;
     margin-top: 20px;
 }
-.info_pokemon2 h3{
+.info_yugioh2 h3{
     position: absolute;
     width: 80px;
     color: white;    
@@ -145,7 +145,7 @@ main{
     bottom: 0px;    
 }
 
-.detalhe_pokemon{
+.detalhe_yugioh{
     position: relative;
     overflow: scroll;
     margin-left: 20px;
@@ -155,7 +155,7 @@ main{
     height: 100%;
 }
 
-.img_pokemon2{
+.img_yugioh2{
     z-index: 9;
     position: absolute;
     width: 186px;
@@ -238,7 +238,7 @@ main{
 }
 
 @media only screen and (min-width: 920px) {
-    .img_pokemon2 {
+    .img_yugioh2 {
         z-index: 9;
         position: absolute;
         width: 320px;

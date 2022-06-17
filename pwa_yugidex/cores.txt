@@ -18,6 +18,6 @@
   fairy: '#EE99AC',
 
 
-  https://pokedex-bb36f.firebaseio.com/pokemon.json
+  https://pokedex-bb36f.firebaseio.com/yugioh.json
 
   https://dribbble.com/shots/6563578-Pokedex-App-Animation
